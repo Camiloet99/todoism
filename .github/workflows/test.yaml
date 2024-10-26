@@ -44,7 +44,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd todo-ism-playwright
+          cd taller4-qa
           npm ci
 
       - name: Install Playwright Browsers
@@ -52,7 +52,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-          cd todo-ism-playwright
+          cd taller4-qa
           npx playwright test todo.spec.ts --trace on
 
       - name: Upload Artifact
@@ -60,5 +60,5 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: todo-ism-playwright/playwright-report/
+          path: taller4-qa/playwright-report/
           retention-days: 35
