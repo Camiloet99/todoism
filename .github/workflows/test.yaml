@@ -53,7 +53,7 @@ jobs:
       - name: Run Playwright tests
         run: |
           cd taller4-qa
-          npx playwright test todo.spec.ts --trace on
+          npx playwright test todolist.spec.ts --trace on
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
